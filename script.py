@@ -37,7 +37,7 @@ for i in range(page_number + 1):
         rating = card.find("p")['class'][1]
         book['rating'] = rating
 
-        price = card.find("p", class_="price_color").text.replace("£", "") # TODO: может стоит убрать потом если не будет ругатся
+        price = card.find("p", class_="price_color").text.replace("£", "")
         book['price'] = price
 
         in_stock = card.find("p", class_="instock availability").text.strip()
